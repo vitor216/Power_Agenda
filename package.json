@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.7",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -10,11 +11,21 @@
     "@types/node": "^16.18.59",
     "@types/react": "^18.2.31",
     "@types/react-dom": "^18.2.14",
+    "add": "^2.0.6",
+    "kalendaryo": "^1.11.1",
+    "or": "^0.2.0",
     "react": "^18.2.0",
+    "react-calendar": "^4.6.1",
     "react-dom": "^18.2.0",
+    "react-input-mask": "^2.0.4",
+    "react-redux": "^8.1.3",
+    "react-router-dom": "^6.17.0",
     "react-scripts": "5.0.1",
+    "save": "^2.9.0",
+    "styled-components": "^6.1.0",
     "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yarn": "^1.22.19"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -39,5 +50,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react-input-mask": "^3.0.4",
+    "@types/styled-components": "^5.1.29",
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "@typescript-eslint/parser": "^5.50.0",
+    "eslint": "^8.33.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^3.0.3"
   }
 }
