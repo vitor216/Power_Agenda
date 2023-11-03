@@ -10,17 +10,20 @@ type Props = Contatoclass
 
 const Contato = ({
   observacao: observacaoOriginal,
+  nome: nomeOriginal,
+  email: emailOriginal,
+  telefone: telefoneOriginal,
   prioridade,
   status,
-  nome,
-  id,
-  email,
-  telefone
+  id
 }: Props) => {
   const dispatch = useDispatch()
   const [estaEditando, setestaEditando] = useState(false)
 
   const [observacao, setObservacao] = useState('')
+  const [nome, setnome] = useState('')
+  const [email, setemail] = useState('')
+  const [telefone, setTelefone] = useState('')
 
   useEffect(() => {
     if (observacaoOriginal.length > 0) {
@@ -28,9 +31,30 @@ const Contato = ({
     }
   }, [observacaoOriginal])
 
+  useEffect(() => {
+    if (nomeOriginal.length > 0) {
+      setnome(nomeOriginal)
+    }
+  }, [nomeOriginal])
+
+  useEffect(() => {
+    if (emailOriginal.length > 0) {
+      setemail(emailOriginal)
+    }
+  }, [emailOriginal])
+
+  useEffect(() => {
+    if (telefoneOriginal.length > 0) {
+      setTelefone(telefoneOriginal)
+    }
+  }, [telefoneOriginal])
+
   function cancelarEdicao() {
     setestaEditando(false)
     setObservacao(observacaoOriginal)
+    setnome(nomeOriginal)
+    setemail(emailOriginal)
+    setTelefone(telefoneOriginal)
   }
 
   function alteraStatusContato(evento: ChangeEvent<HTMLInputElement>) {
@@ -50,19 +74,28 @@ const Contato = ({
           checked={status === enums.Status.ATIVO}
           onChange={alteraStatusContato}
         />
-        <S.Titulo>
-          {estaEditando && <em>Editando: </em>}
-          {nome}
-        </S.Titulo>
+        <S.Titulo
+          disabled={!estaEditando}
+          value={nome}
+          onChange={(evento) => setnome(evento.target.value)}
+        />
       </label>
-      <S.Tel>{telefone}</S.Tel>
-      <S.Tel>{email}</S.Tel>
       <S.Tag parametro="prioridade" prioridade={prioridade}>
         {prioridade}
       </S.Tag>
       <S.Tag parametro="status" status={status}>
         {status}
       </S.Tag>
+      <S.Descricao
+        disabled={!estaEditando}
+        value={telefone}
+        onChange={(evento) => setTelefone(evento.target.value)}
+      />
+      <S.Descricao
+        disabled={!estaEditando}
+        value={email}
+        onChange={(evento) => setemail(evento.target.value)}
+      />
       <S.Descricao
         disabled={!estaEditando}
         value={observacao}

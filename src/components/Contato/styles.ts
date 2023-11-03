@@ -34,19 +34,19 @@ export const Card = styled.div`
   label {
     display: flex;
     align-items: center;
-    margin-bottom: 16px;
   }
 `
 
-export const Titulo = styled.h3`
+export const Titulo = styled.textarea`
   font-size: 18px;
   font-weight: bold;
   margin-left: 8px;
-`
-export const Tel = styled.h4`
-  font-size: 12px;
-  font-weight: bold;
-  margin-bottom: 8px;
+  line-height: 24px;
+  display: block;
+  resize: none;
+  border: none;
+  background-color: transparent;
+  margin-top: 25px;
 `
 export const Tag = styled.span<TagProps>`
   padding: 4px 8px;

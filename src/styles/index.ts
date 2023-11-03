@@ -23,7 +23,7 @@ export const MainContainer = styled.main`
 export const Titulo = styled.h2`
   display: block;
   margin-top: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-size: 18px;
   font-weight: bold;
 `
