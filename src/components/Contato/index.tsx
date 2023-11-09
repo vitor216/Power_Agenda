@@ -13,6 +13,7 @@ const Contato = ({
   nome: nomeOriginal,
   email: emailOriginal,
   telefone: telefoneOriginal,
+  phone: phoneOriginal,
   prioridade,
   status,
   id
@@ -24,6 +25,7 @@ const Contato = ({
   const [nome, setnome] = useState('')
   const [email, setemail] = useState('')
   const [telefone, setTelefone] = useState('')
+  const [phone, setPhone] = useState('')
 
   useEffect(() => {
     if (observacaoOriginal.length > 0) {
@@ -49,12 +51,19 @@ const Contato = ({
     }
   }, [telefoneOriginal])
 
+  useEffect(() => {
+    if (phoneOriginal.length > 0) {
+      setPhone(phoneOriginal)
+    }
+  }, [phoneOriginal])
+
   function cancelarEdicao() {
     setestaEditando(false)
     setObservacao(observacaoOriginal)
     setnome(nomeOriginal)
     setemail(emailOriginal)
     setTelefone(telefoneOriginal)
+    setPhone(phoneOriginal)
   }
 
   function alteraStatusContato(evento: ChangeEvent<HTMLInputElement>) {
@@ -101,6 +110,11 @@ const Contato = ({
         value={observacao}
         onChange={(evento) => setObservacao(evento.target.value)}
       />
+      <S.Descricao
+        disabled={!estaEditando}
+        value={phone}
+        onChange={(evento) => setPhone(evento.target.value)}
+      />
       <S.BarraAcoes>
         {estaEditando ? (
           <>
@@ -114,6 +128,7 @@ const Contato = ({
                     nome,
                     id,
                     telefone,
+                    phone,
                     email
                   })
                 )

@@ -60,6 +60,7 @@ const ListaDeContatos = () => {
               nome={n.nome}
               email={n.email}
               telefone={n.telefone}
+              phone={n.phone}
               status={n.status}
               prioridade={n.prioridade}
             />

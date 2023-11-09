@@ -7,6 +7,7 @@ class Contato {
   id: number
   email: string
   telefone: string
+  phone: string
   observacao: string
 
   constructor(
@@ -16,6 +17,7 @@ class Contato {
     email: string,
     id: number,
     telefone: string,
+    phone: string,
     observacao: string
   ) {
     this.nome = nome
@@ -23,6 +25,7 @@ class Contato {
     this.status = status
     this.email = email
     this.telefone = telefone
+    this.phone = phone
     this.id = id
     this.observacao = observacao
   }

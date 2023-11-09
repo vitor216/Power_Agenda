@@ -15,6 +15,7 @@ const initialState: ContatoState = {
       status: enums.Status.ATIVO,
       email: 'vitor@gmail.com',
       telefone: '(21) 11111-1111',
+      phone: '(21) 11111-1111',
       observacao: '123'
     },
     {
@@ -24,6 +25,7 @@ const initialState: ContatoState = {
       status: enums.Status.BLOQUEADO,
       email: 'naira@gmail.com',
       telefone: '(21) 22222-2222',
+      phone: '(21) 22222-2222',
       observacao: '456'
     },
     {
@@ -33,6 +35,7 @@ const initialState: ContatoState = {
       status: enums.Status.ATIVO,
       email: 'nicolas@gmail.com',
       telefone: '(21) 33333-3333',
+      phone: '(21) 33333-3333',
       observacao: '789'
     },
     {
@@ -42,6 +45,7 @@ const initialState: ContatoState = {
       status: enums.Status.ATIVO,
       email: '',
       telefone: '(21) 44444-4444',
+      phone: '(21) 44444-4444',
       observacao: '987'
     },
     {
@@ -51,6 +55,7 @@ const initialState: ContatoState = {
       status: enums.Status.ATIVO,
       email: '',
       telefone: '(21) 55555-5555',
+      phone: '(21) 55555-5555',
       observacao: '654'
     },
     {
@@ -60,6 +65,7 @@ const initialState: ContatoState = {
       status: enums.Status.ATIVO,
       email: 'RedeDor@yahoo.com.br',
       telefone: '(21) 66666-6666',
+      phone: '(21) 66666-6666',
       observacao: '321'
     },
     {
@@ -69,6 +75,7 @@ const initialState: ContatoState = {
       status: enums.Status.ATIVO,
       email: 'Ana@gmail.com',
       telefone: '(21) 77777-7777',
+      phone: '(21) 77777-7777',
       observacao: '741'
     },
     {
@@ -78,6 +85,7 @@ const initialState: ContatoState = {
       status: enums.Status.BLOQUEADO,
       email: 'carla@gmail.com',
       telefone: '(21) 88888-8888',
+      phone: '(21) 88888-8888',
       observacao: '852'
     }
   ]
